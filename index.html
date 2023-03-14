@@ -10,9 +10,12 @@
 </head>
 <body>
     <div id="app">
-        <input type="text" v-model="mensaje">
-        <h1>{{mensaje2}}</h1>
-        <strong v-text="mensaje2"></strong>
+        <label>Zona Franja: <strong>Campus</strong></label>
+        <div>
+            <input type="radio" v-model="centinela" v-bind:value="true"> Ver
+            <input type="radio" v-model="centinela" v-bind:value="false"> Ocultar
+        </div>
+        <div v-show="centinela" class="info">Los mejores</div>
     </div>
 </body>
 </html>
